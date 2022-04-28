@@ -1,0 +1,21 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color:#99E200;
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+    margin: 20px 0 auto;
+}
