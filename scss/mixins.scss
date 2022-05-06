@@ -1,0 +1,20 @@
+@mixin flex ($direction,$justify-content){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin flex-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+@mixin flex-column-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+$breakpoints: (phone: 640px,
+               tablet: 768px,
+               desktop: 1024px) !default;
+

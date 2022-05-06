@@ -1,28 +1,112 @@
-*, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import './reset';
+@import './variables';
+@import './mixins.scss';
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
 }
 
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color:#99E200;
+@function bgc($bg-name) {
+    @return map-get($bg-colors, $bg-name)
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
 
 header {
     position: relative;
-    display: flex;
-    justify-content: center;
+    @include flex(row,center);
+    box-shadow: 0 2px 3px 0 rgba(98, 97, 97, 0.476);
+    z-index: 1;
+
+    a {
+        position: absolute;
+        top: 25px;
+        left: 80px;
+        font-size: 1.2rem;
+        color: initial;
+    }
+
+    &.sticky {
+        position: fixed;
+        width: 100%;
+        background-color: #FFF;
+        top: 0;
+    }
+
+    h1 {
+        font-family: "Shrikhand", cursive;
+        text-align: center;
+        margin: 20px 0 auto;
+    }
 }
 
-h1 {
-    font-family: "Shrikhand", cursive;
-    text-align: center;
-    margin: 20px 0 auto;
+.main-container {
+    @include flex(column,center);
+    background-color: bgc(smoked-white);
+    padding-bottom: 50px;
+}
+
+.presentation {
+    width: 50%;
+    margin-top: 69px;
+
+    &__picture {
+        width: 100%;
+        height: 634px;
+        object-fit: cover;
+
+    &--old-dish-1 {
+        width: 100%;
+        position: relative;
+        top: -4.3rem;
+    }
+
+    &--old-dish-3 {
+        width: 100%;
+    }
+
+    &--old-dish-4 {
+        width: 100%;
+    }
+}
+    &__title {
+        position: absolute;
+        bottom: 266px;
+        display: flex;
+        width: inherit;
+        justify-content: space-between;
+        background-color: bgc(smoked-white);
+        border-radius: 40px 40px 0 0;
+        padding: 20px 45px;
+    }
+
+    &__title--old-dish-3 {
+        position: absolute;
+        display: flex;
+        width: inherit;
+        justify-content: space-between;
+        background-color: bgc(smoked-white);
+        border-radius: 40px 40px 0 0;
+        padding: 20px 45px;
+        bottom: 260px;
+    }
+
+    &__title--old-dish-4 {
+        position: absolute;
+        display: flex;
+        width: inherit;
+        justify-content: space-between;
+        background-color: bgc(smoked-white);
+        border-radius: 40px 40px 0 0;
+        padding: 20px 45px;
+        bottom: 242px;
+    }
 }
 
 .location {
-    display: flex;
-    justify-content: center;
+    @include flex(row,center);
     padding: 1.25rem 1rem;
     background-color: #f3f3f3;
     font-size: 1.2rem;
@@ -30,6 +114,10 @@ h1 {
 
     &__icon {
         margin-right: 1rem;
+    }
+
+    &__city {
+        font-weight: weight(bold);
     }
 }
 
@@ -39,91 +127,272 @@ h1 {
     background-color: #fafafa;
 
     &__title {
-        font-weight: 700;
+        font-weight: weight(bold);
     }
 
     &__subtitle {
-        font-weight: 300;
+        font-weight: map-get($font-weights, regular);
         margin: 1.5rem 0;
     }
 
     &__btn {
         color:#FFF;
         padding: .9rem 2rem;
-        font-weight: 500;
+        font-weight: weight(regular);
         border-radius: 1.5rem;
         font-size: 1.2rem;
         background-color: #686868;
-        background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+        background-image: bgc(btn);
         cursor: pointer;
         box-shadow: 0px 2px 10px rgb(107, 106, 106);
+
     }
+    &__btn:hover {
+        animation: pulse 1s;
+        box-shadow: 0 0 0 .3em rgba(#fff,0);
+    }
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 $primary-color; }
+      }
 }
 
 .working {
     padding: 2rem 1rem;
 
     &__title {
-        margin-top: 0;
+        margin: 0 0 2rem -1rem;
     }
 
     &__steps {
         display: flex;
-        gap: 60px;
+        gap: 2.5rem;
+    }
+ 
+    &__step {
+        flex: 1;
+        padding: 20px;
+        background-color: #f6f6f6;
+        border-radius: 10px;
+        list-style-type: none;
+    }
+
+   &__step:hover {
+        background-color: rgba(243, 218, 245, 0.512);
+    }
+
+    &__stepNum {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        color: #FFF;
+        font-weight: weight(bold);
+        margin-left: -35px;
+        padding: .51rem;
+        line-height: .6;
+    }
+
+    .icon {
+    position: relative;
+    margin-right: 10px;
+    font-size: 1.3rem;
+    color: rgb(169, 169, 169);
+    }
+
+}
+.restaurants {
+    background-color: #f6f6f6;
+
+    &__title {
+        padding: 2rem 0;
     }
 }
-
 .container {
     max-width: 80%;
     margin: auto;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
+    @include flex-cards;
 }
 
 .card {
     background-color: #fff;
+    box-shadow: 10px 10px 10px grey ;
     border-radius: 1rem;
     position: inherit;
     text-decoration: none;
+    margin-bottom: 2rem;
     display: block;
+    transition: all .6s ease-in-out;
+    
+    a {
+        text-decoration: none;
+        color: initial;
+    }
+
+    &:first-child {
+        flex: 1;
+    }
+    &:first-child:hover {
+        flex: 3;
+    }
+
+    &:last-child {
+        flex: 1;
+    }
+
+    &:last-child:hover {
+        flex: 3;
+    }
 
     &__img {
         width: 100%;
         height: 450px;
         border: 0 solid transparent;
-        border-radius: 1rem;
-        box-shadow: 10px 10px 10px grey ;
+        border-radius: 1rem 1rem 0 0;
         object-fit: cover;
     }
 
     &__badge {
-        background-color: $tertiary-color;
+        position: absolute;
+        padding: .7rem 1.5rem;
+        background-color: map-get($theme-colors, "new");
+        color: $badge-color;
+        font-weight: weight(bold);
+        border-radius: .2rem;
+        margin-left: -9rem;
+        margin-top: 28px;
+        animation-duration: 1.2s;
+        animation-name: flash;
+        animation-iteration-count: infinite;
+        transition: none;
+    
+    @keyframes flash {
+        0%  { opacity:0; width: 50px; height: 50px; border-radius: 50px; }
+        10% { opacity: .3; }
+        40% { opacity:.6; }
+        80% { opacity: .8; }
+        100% { opacity:.1; color: rgb(26, 186, 154); }
+      }
     }
+
     &__footer {
         position: relative;
-        padding: 10px;
-        display: flex;
-        align-items: center;
+        padding: 7px 10px 10px 15px;
+        @include flex(row,space-between);  
     }
 }
 
+.menuCoverPage {
+    @include flex(column,center);
+    width: 50%;
+    padding: 10px 0 10px 0;
+
+    &__dish-title {
+        width: 90%;
+
+    .underlined-text {
+        padding-bottom: 5px;
+        border-bottom: 3px solid $tertiary-color;
+    }
+
+    }
+}
+
+.dishOfDay {
+    width: 90%;
+    height: 70px;
+    @include flex(row,space-between);
+    background-color: bgc(white);
+    padding: 10px 0 10px 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    &__dish-detail {
+        line-height: 1.3;
+    }
+
+    &__dish-detail--fontW {
+        margin-top: 5px;
+        font-weight: weight(regular);
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: .75rem 1.25rem;
+    border: none;
+    border-radius: 10rem;
+    color: #fff;
+    font-size: 1rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: bgc(btn);
+      border-radius: 10rem;
+      z-index: -2;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      transition: all .3s;
+      border-radius: 10rem;
+      z-index: -1;
+    }
+    &:hover {
+        filter: brightness(95%);
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
 .footer {
     background-color: #353535;
-
+    color: #FFF;
     .container {
-        display: flex;
-        flex-direction: column;
+        @include flex-column-footer;
     }
 
     &__logo {
-        color: white;
+        margin: 0.9rem 0;
         font-family: "Shrikhand", cursive;
-
     }
+
+    &__list {
+        list-style: none;
+
+    &--element {
+        line-height: 1.8;
+
+        .icon {
+            margin-right: 10px;
+        }
+    }    
+    }
+    
+     &__link {
+         color: #FFF;
+         text-decoration: none;
+     }
 }
