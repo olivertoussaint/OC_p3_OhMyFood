@@ -37,6 +37,12 @@ header a {
   color: initial;
 }
 
+@media screen and (max-width: 600px) {
+  header a {
+    left: 20px;
+  }
+}
+
 header.sticky {
   position: fixed;
   width: 100%;
@@ -73,11 +79,23 @@ header h1 {
   margin-top: 69px;
 }
 
+@media screen and (max-width: 600px) {
+  .presentation {
+    width: 100%;
+  }
+}
+
 .presentation__picture {
   width: 100%;
   height: 634px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .presentation__picture {
+    height: 270px;
+  }
 }
 
 .presentation__picture--old-dish-1 {
@@ -109,6 +127,13 @@ header h1 {
   padding: 20px 45px;
 }
 
+@media screen and (max-width: 600px) {
+  .presentation__title {
+    padding: 20px 15px;
+    bottom: 309px;
+  }
+}
+
 .presentation__title--old-dish-3 {
   position: absolute;
   display: -webkit-box;
@@ -122,6 +147,13 @@ header h1 {
   border-radius: 40px 40px 0 0;
   padding: 20px 45px;
   bottom: 260px;
+}
+
+@media screen and (max-width: 600px) {
+  .presentation__title--old-dish-3 {
+    padding: 20px 20px;
+    bottom: 326px;
+  }
 }
 
 .presentation__title--old-dish-4 {
@@ -139,6 +171,13 @@ header h1 {
   bottom: 242px;
 }
 
+@media screen and (max-width: 600px) {
+  .presentation__title--old-dish-4 {
+    padding: 20px 20px;
+    bottom: 320px;
+  }
+}
+
 .location {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,7 +193,7 @@ header h1 {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 1.25rem 1rem;
-  background-color: #f3f3f3;
+  background-color: #e3e3e3;
   font-size: 1.2rem;
   position: relative;
 }
@@ -164,13 +203,13 @@ header h1 {
 }
 
 .location__city {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .presenting {
-  padding: 2rem;
+  padding: 2rem 0 3rem 0;
   text-align: center;
-  background-color: #fafafa;
+  background-color: whitesmoke;
 }
 
 .presenting__title {
@@ -179,13 +218,18 @@ header h1 {
 
 .presenting__subtitle {
   font-weight: 300;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 3rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .presenting__subtitle {
+    margin: 1.5rem 0 2.5rem 0;
+  }
 }
 
 .presenting__btn {
   color: #FFF;
-  padding: .9rem 2rem;
-  font-weight: 300;
+  padding: 1rem 2rem;
   border-radius: 1.5rem;
   font-size: 1.2rem;
   background-color: #686868;
@@ -232,18 +276,51 @@ header h1 {
   gap: 2.5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .working__steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 .working__step {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 20px;
-  background-color: #f6f6f6;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: #fdfafa;
   list-style-type: none;
+  -webkit-box-shadow: 0px 9px 30px #bfbfbf;
+          box-shadow: 0px 9px 30px #bfbfbf;
+}
+
+@media screen and (max-width: 600px) {
+  .working__step {
+    width: 100%;
+    border-radius: 20px;
+    font-weight: 700;
+  }
 }
 
 .working__step:hover {
-  background-color: rgba(243, 218, 245, 0.512);
+  background-color: rgba(247, 223, 249, 0.512);
+}
+
+.working__step:hover .icon {
+  color: #9356DC;
 }
 
 .working__stepNum {
@@ -261,13 +338,24 @@ header h1 {
 
 .working .icon {
   position: relative;
-  margin-right: 10px;
+  margin: 0 10px 0 10px;
   font-size: 1.3rem;
   color: darkgray;
 }
 
+@media screen and (max-width: 600px) {
+  .working .icon {
+    margin: 0 20px 0 10px;
+  }
+}
+
+.working .label {
+  font-weight: 700;
+  cursor: default;
+}
+
 .restaurants {
-  background-color: #f6f6f6;
+  background-color: whitesmoke;
 }
 
 .restaurants__title {
@@ -281,6 +369,13 @@ header h1 {
   padding-bottom: 1rem;
 }
 
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 90%;
+    padding: 15px 0 10px 0;
+  }
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,6 +383,25 @@ header h1 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
 }
 
 .card {
@@ -301,6 +415,13 @@ header h1 {
   display: block;
   -webkit-transition: all .6s ease-in-out;
   transition: all .6s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    -webkit-box-shadow: 0 0 10px #bbbbbb;
+            box-shadow: 0 0 10px #bbbbbb;
+  }
 }
 
 .card a {
@@ -320,16 +441,38 @@ header h1 {
           flex: 3;
 }
 
+@media screen and (max-width: 600px) {
+  .card:first-child:hover {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+}
+
 .card:last-child {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
+@media screen and (max-width: 600px) {
+  .card:last-child {
+    height: 250px;
+  }
+}
+
 .card:last-child:hover {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+}
+
+@media screen and (max-width: 600px) {
+  .card:last-child:hover {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
 }
 
 .card__img {
@@ -341,6 +484,13 @@ header h1 {
      object-fit: cover;
 }
 
+@media screen and (max-width: 600px) {
+  .card__img {
+    height: 168px;
+    width: 336px;
+  }
+}
+
 .card__badge {
   position: absolute;
   padding: .7rem 1.5rem;
@@ -350,58 +500,17 @@ header h1 {
   border-radius: .2rem;
   margin-left: -9rem;
   margin-top: 28px;
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
-  -webkit-animation-name: flash;
-          animation-name: flash;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-transition: none;
-  transition: none;
 }
 
-@-webkit-keyframes flash {
-  0% {
-    opacity: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-  }
-  10% {
-    opacity: .3;
-  }
-  40% {
-    opacity: .6;
-  }
-  80% {
-    opacity: .8;
-  }
-  100% {
-    opacity: .1;
-    color: #1aba9a;
+@media screen and (max-width: 600px) {
+  .card__badge {
+    padding: .5rem 1rem;
+    margin-left: -7rem;
   }
 }
 
-@keyframes flash {
-  0% {
-    opacity: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-  }
-  10% {
-    opacity: .3;
-  }
-  40% {
-    opacity: .6;
-  }
-  80% {
-    opacity: .8;
-  }
-  100% {
-    opacity: .1;
-    color: #1aba9a;
-  }
+.card__title {
+  font-family: "Shrikhand", cursive;
 }
 
 .card__footer {
@@ -440,6 +549,13 @@ header h1 {
   padding: 10px 0 10px 0;
 }
 
+@media screen and (max-width: 600px) {
+  .menuCoverPage {
+    width: 100%;
+    padding: 15px 0 10px 0;
+  }
+}
+
 .menuCoverPage__dish-title {
   width: 90%;
 }
@@ -472,13 +588,83 @@ header h1 {
   margin-top: 20px;
 }
 
+.dishOfDay__cost {
+  padding: 15px 20px 0 0;
+  font-weight: 700;
+}
+
 .dishOfDay__dish-detail {
   line-height: 1.3;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .dishOfDay__dish-detail--fontW {
   margin-top: 5px;
   font-weight: 300;
+}
+
+@media screen and (max-width: 600px) {
+  .dishOfDay__dish-detail--fontW {
+    font-size: small;
+  }
+}
+
+.dishOfDay .fade-in {
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
+}
+
+.dishOfDay .box {
+  overflow: hidden;
+  text-align: center;
+  background-color: #99E2D0;
+  width: 0;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  border-radius: 0 16px 16px 0;
+  padding: 20px 0px;
+}
+
+.dishOfDay .isApproved {
+  display: inline-block;
+  margin: auto;
+  font-size: 1rem;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  color: #fff;
+}
+
+.dishOfDay:hover .box {
+  width: 70px;
+}
+
+.dishOfDay:hover .box > .isApproved {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .btn {
