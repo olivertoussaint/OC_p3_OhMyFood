@@ -379,7 +379,93 @@ header {
         padding: 7px 10px 10px 15px;
         @include flex(row,space-between);  
     }
+
+    // &__btn {
+    //     height: 2rem;
+    //     width: 2rem;
+    //     background-color: transparent;
+    //     border: 0 solid transparent;
+    //     padding: 0;
+    //     overflow: hidden;
+    //     position: relative;
+    //     cursor: pointer;
+    //     z-index: 0;
+    // }
+
+    // &__btn::before {
+    //     opacity: 0;
+    //     transition: all .5s;
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    //     z-index: -1;
+    // }
+    
+    // &__btn:hover::before {
+    //     opacity: 1;
+    // }
+    // .fa-heart::before {
+    //     content: "\f004";
+    // }
+
+    
+    
+    // .fa-heart::before {
+    //     content: "\f004";
+    // }
+    
 }
+
+.heart {
+    position: relative;
+    font-size: 25px;
+}
+
+
+
+
+.heart:hover .far.fa-heart {
+    transition-property: transform;
+    transition-duration: 10ms;
+    transition-delay: 200ms;
+    transform: scale(0);
+}
+
+.heart:hover .fas.fa-heart {
+    transform: scale(1);
+}
+
+.fa-heart {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.far.fa-heart {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: inherit;
+    }
+
+.fas.fa-heart {
+    background: linear-gradient(to top right, #ED74DA, #9356DC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition-property: transform;
+    transition-duration: 500ms;
+    transform: scale(0);
+}
+
+
 
 .menuCoverPage {
     @include flex(column,center);
@@ -413,13 +499,16 @@ header {
     margin-top: 20px;
 
     &__cost {
-        padding: 15px 20px 0 0;
+        padding: 15px 20px 0 20px;
         font-weight: weight(bold);
     }
 
     &__dish-detail {
         line-height: 1.3;
         flex-grow: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__dish-detail--fontW {
@@ -441,8 +530,8 @@ header {
         background-color: #99E2D0;
         width: 0;
         transition: width 1s;
-        border-radius: 0 16px 16px 0;
-        padding: 20px 0px;
+        border-radius: 0 12px 12px 0;
+        padding: 21px 0px;
 
     }
 
@@ -450,8 +539,8 @@ header {
         display: inline-block;
 	    margin: auto;
         font-size: 1rem;
-	    transform: rotate(360deg);
-	    transition: transform 500ms;
+	    transform: rotate(180deg);
+	    transition: transform 900ms;
         color: #fff;
     }
 
