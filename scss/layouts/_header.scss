@@ -1,0 +1,25 @@
+header {
+    position: relative;
+    @include flex(row,center);
+    box-shadow: 0 2px 3px 0 rgba(98, 97, 97, 0.476);
+    z-index: 1;
+
+    a {
+        position: absolute;
+        top: 25px;
+        left: 80px;
+        font-size: 1.2rem;
+        color: initial;
+
+        @media screen and (max-width: 500px) {
+            left: 30px;
+         }
+    }
+
+    &.sticky {
+        position: fixed;
+        width: 100%;
+        background-color: #FFF;
+        top: 0;
+    } 
+}

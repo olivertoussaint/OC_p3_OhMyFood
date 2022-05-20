@@ -1,0 +1,29 @@
+.footer {
+    background-color: #353535;
+    color: #FFF;
+    .container {
+        @include flex-column-footer;
+    }
+
+    &__logo {
+        margin: 0.9rem 0;
+        font-family: "Shrikhand", cursive;
+    }
+
+    &__list {
+        list-style: none;
+
+    &--element {
+        line-height: 1.8;
+
+        .icon {
+            margin-right: 10px;
+        }
+    }    
+    }
+    
+     &__link {
+         color: #FFF;
+         text-decoration: none;
+     }
+}

@@ -1,0 +1,57 @@
+@keyframes disappear {
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes rotating {
+    0% {
+        font-size: 24px;
+        height: 1px;
+        transform: translate3d(1, 1, 200);
+        box-shadow: none;
+    }
+    10% {
+        background: transparent;
+        // box-shadow: none;
+    }
+    50% {
+        padding-left: -10px;
+        font-size: small;
+        background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+        background: transparent;
+        // box-shadow: none;
+    }
+    60% {
+        height: 2px;
+        background: transparent;
+    }
+    70% {
+        height: 20px;
+        line-height: 20px;
+        color: rgba(124, 35, 129, 0.744);
+        position: relative;
+        background: transparent;
+        font-size: larger;
+    }
+    80% {
+        transform: rotate3d(-1, 1, 100, 3.14rad);
+        position: relative;
+        height: 20px;
+        line-height: 20px;
+        color: #403d44;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(25%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

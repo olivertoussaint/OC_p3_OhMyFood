@@ -1,0 +1,41 @@
+.heart {
+    position: relative;
+    font-size: 25px;
+}
+
+.heart:hover .far.fa-heart {
+    transition-property: transform;
+    transition-duration: 10ms;
+    transition-delay: 200ms;
+    transform: scale(0);
+}
+
+.heart:hover .fas.fa-heart {
+    transform: scale(1);
+}
+
+.fa-heart {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.far.fa-heart {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: inherit;
+}
+
+.fas.fa-heart {
+    background: linear-gradient(to top right, #ED74DA, #9356DC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition-property: transform;
+    transition-duration: 500ms;
+    transform: scale(0);
+}
