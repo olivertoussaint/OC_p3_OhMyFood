@@ -1,3 +1,22 @@
+@media screen and (min-width: 0) {
+  .working {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (min-width: 0) {
+  .menusCover {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @-webkit-keyframes disappear {
   to {
     -webkit-transform: scale(0);
@@ -131,25 +150,6 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-@media (min-width: 0) {
-  .working {
-    padding: 2rem 0;
-  }
-}
-
-@media (min-width: 0) {
-  .menusCover {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 body {
