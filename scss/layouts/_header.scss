@@ -11,9 +11,9 @@ header {
         font-size: 1.2rem;
         color: initial;
 
-        @media screen and (max-width: 500px) {
-            left: 30px;
-         }
+        // @media screen and (max-width: 500px) {
+        //     left: 30px;
+        //  }
     }
 
     &.sticky {
