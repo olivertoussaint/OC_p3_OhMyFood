@@ -3,6 +3,12 @@
     color: #FFF;
     .container {
         @include flex-column-footer;
+        padding-left: 15px;
+
+        @media screen and (min-width: 1200px) {
+            width: 1280px;
+            margin: auto 0;
+        }
     }
 
     &__logo {

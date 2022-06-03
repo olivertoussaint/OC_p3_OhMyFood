@@ -1,0 +1,56 @@
+.loader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    height: 100%;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disappear 90ms 6s  forwards;
+    transform-origin: top right ;
+
+    & .face {
+        width: 50px;
+        height: 50px;
+        font-family: "Shrikhand", cursive;
+        line-height: 50px;
+        font-size: 15px;
+        text-align: center;
+        border-radius: 4px;
+    }
+    
+    div {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        transform-style: preserve-3d;
+        animation: rotating 1.1s 900ms ease infinite;
+    }
+
+    & .perspective-box-far {
+        transform: perspective(550px) rotateX(-45deg) rotateY(30deg);
+      }
+
+    & .top {
+        background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+        color: #FFF;
+        box-shadow: 0 0 20px rgb(83, 221, 8);
+        transform: rotateX(90deg) translate3d(0, 0, 27px);
+    }
+
+    & .left {
+        background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+        color: #FFF;
+        box-shadow: 0 0 20px rgb(83, 221, 8);
+        transform: rotateY(-90deg) translate3d(0, 0, 27px);
+    }
+
+    & .front {
+            background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+            color: #fff;
+            box-shadow: 0 0 20px rgb(83, 221, 8);
+            transform: translate3d(0, 0, 27px);
+    }
+}

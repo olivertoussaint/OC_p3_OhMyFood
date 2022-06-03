@@ -1,5 +1,5 @@
 $breakpoints: (
-    "xs": 0,
+    "xs": 380px,
     "sm": 480px,
     "md": 720px,
     "lg": 960px,
@@ -7,12 +7,12 @@ $breakpoints: (
 );
 
 @mixin xs {
-    @media screen and (min-width: map-get($breakpoints, "xs")) {
+    @media screen and (max-width: map-get($breakpoints, "xs")) {
         @content;
     }
 }
 @mixin sm {
-    @media (min-width: map-get($breakpoints, "sm")) {
+    @media (max-width: map-get($breakpoints, "sm")) {
         @content;
     }
 }
@@ -33,14 +33,37 @@ $breakpoints: (
 }
 
 .working {
-    @include xs {
-        padding: 2rem 0;
+    .container {
+        @include sm {
+            max-width: 100%;
+        }
     }
 }
-.menusCover {
-    @include xs {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+
+.restaurants {
+    .container {
+        @include sm {
+            max-width: 100%;
+        }
+    }
+}
+
+.main-container {
+    @include sm {
+        max-width: 100%;
+    }
+    
+    .presentation {
+        @include sm {
+            height: 300px;
+        }
+        @include md {
+            height: 635px;
+        }
+       &__picture {
+           @include sm {
+               height: 300px;
+           }
+       } 
     }
 }
