@@ -13,4 +13,33 @@
     display: flex;
     flex-direction: column;
 }
+@mixin grid-menu {
+    display: grid;
+    width: 1200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    column-gap: 2rem;
+}
+@mixin grid-menu-1 {
+    display: grid;
+    width: 95%;
+    position: relative;
+    bottom: 80px;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+@mixin grid-menu-2 {
+    display: grid;
+    width: 80%;
+    position: relative;
+    bottom: 80px;
+    grid-template-columns: 1fr;
+}
+@mixin grid-menu-3 {
+    display: grid;
+    width: 80%;
+    position: relative;
+    bottom: 80px;
+    grid-template-columns: 1fr 1fr;
+}
 

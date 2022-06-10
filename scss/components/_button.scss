@@ -39,4 +39,8 @@
         animation: pulse 1s;
         box-shadow: 0 0 0 .3em rgba(#fff,0);
     }
+
+    @media screen and (min-width: 0px) and (max-width: 1024px) {
+      margin: -2rem auto 0 auto;
+    }
   }

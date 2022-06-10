@@ -1,6 +1,10 @@
 .heart {
     position: relative;
     font-size: 25px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.2rem;
+    }
 }
 
 .heart:hover .far.fa-heart {
