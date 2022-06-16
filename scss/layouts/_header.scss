@@ -11,7 +11,7 @@ header {
         font-size: 1.2rem;
         color: initial;
         
-        @media screen and (max-width: 480px) {
+        @include mobile-l {
             left: 1.5rem;
          }
     }

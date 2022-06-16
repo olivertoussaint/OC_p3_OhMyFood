@@ -1,0 +1,10 @@
+.menusCover {
+    @include grid-menu;
+    
+    @include tablet {
+        @include grid-menu-1;
+    }
+    @include laptop {
+        @include grid-menu-2;
+    }
+}

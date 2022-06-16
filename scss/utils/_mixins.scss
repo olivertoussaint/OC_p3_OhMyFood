@@ -4,22 +4,28 @@
     align-items: center;
     flex-direction: $direction;
 }
+
 @mixin flex-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
 }
+
 @mixin flex-column-footer {
     display: flex;
     flex-direction: column;
 }
+
 @mixin grid-menu {
     display: grid;
     width: 1200px;
+    position: relative;
+    bottom: 100px;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
     column-gap: 2rem;
 }
+
 @mixin grid-menu-1 {
     display: grid;
     width: 95%;
@@ -28,6 +34,7 @@
     grid-template-columns: 1fr;
     gap: 1rem;
 }
+
 @mixin grid-menu-2 {
     display: grid;
     width: 80%;
@@ -35,11 +42,12 @@
     bottom: 80px;
     grid-template-columns: 1fr;
 }
-@mixin grid-menu-3 {
-    display: grid;
-    width: 80%;
-    position: relative;
-    bottom: 80px;
-    grid-template-columns: 1fr 1fr;
+
+@mixin dish-appear-delay {
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+        }
+    }
 }
 

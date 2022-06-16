@@ -1,69 +1,79 @@
-$breakpoints: (
-    "xs": 380px,
-    "sm": 480px,
-    "md": 720px,
-    "lg": 960px,
-    "xl": 1200px,
+$breakpoints : (
+    "breakpoint-0": 0px,
+    "mobile-S": 320px, 
+    "mobile-M": 375px,
+    "mobile-L": 480px,
+    "standard": 600px,
+    "tablet": 768px,
+    "phablet-max": 900px,
+    "phablet": 901px,
+    "laptop": 1280px,
+    "laptop-x": 1281px,
+    "xl-screen": 1440px
 );
 
-@mixin xs {
-    @media screen and (max-width: map-get($breakpoints, "xs")) {
-        @content;
-    }
-}
-@mixin sm {
-    @media (max-width: map-get($breakpoints, "sm")) {
-        @content;
-    }
-}
-@mixin md {
-    @media (min-width: map-get($breakpoints, "md")) {
-        @content;
-    }
-}
-@mixin lg {
-    @media (min-width: map-get($breakpoints, "lg")) {
-        @content;
-    }
-}
-@mixin xl {
-    @media (min-width: map-get($breakpoints, "xl")) {
+@mixin breakpoint-0 {
+    @media screen and (min-width: map-get($breakpoints, breakpoint-0)) {
         @content;
     }
 }
 
-.working {
-    .container {
-        @include sm {
-            max-width: 100%;
-        }
+@mixin mobile-s {
+    @media screen and (max-width: map-get($breakpoints, mobile-S)) {
+        @content;
     }
 }
 
-.restaurants {
-    .container {
-        @include sm {
-            max-width: 100%;
-        }
+@mixin mobile-m {
+    @media screen and (max-width: map-get($breakpoints, mobile-M)) {
+        @content;
     }
 }
 
-.main-container {
-    @include sm {
-        max-width: 100%;
+@mixin mobile-l {
+    @media screen and (max-width: map-get($breakpoints, mobile-L)) {
+        @content;
     }
-    
-    .presentation {
-        @include sm {
-            height: 300px;
-        }
-        @include md {
-            height: 635px;
-        }
-       &__picture {
-           @include sm {
-               height: 300px;
-           }
-       } 
+}
+
+@mixin standard {
+    @media screen and (max-width: map-get($breakpoints, standard)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin phablet-max {
+    @media screen and (max-width: map-get($breakpoints, phablet-max)) {
+        @content;
+    }
+}
+
+@mixin phablet {
+    @media screen and (min-width: map-get($breakpoints, phablet)) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: map-get($breakpoints, laptop)) {
+        @content;
+    }
+}
+
+@mixin laptop-x{
+    @media screen and (min-width: map-get($breakpoints, laptop-x)) {
+        @content;
+    }
+}
+
+@mixin xl-screen {
+    @media screen and (min-width: map-get($breakpoints, xl-screen)) {
+        @content;
     }
 }

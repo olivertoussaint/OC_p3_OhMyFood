@@ -6,20 +6,19 @@
 
 @keyframes rotating {
     0% {
-        font-size: 24px;
+        font-size: 1.5rem;
         height: 1px;
-        transform: translate3d(1, 1, 200);
+        transform : translate3d(-5px, -5px, -5px); 
         box-shadow: none;
     }
     10% {
         background: transparent;
     }
     50% {
-        padding-left: -10px;
-        font-size: small;
+        padding-left: 0px;
+        font-size: 0.875rem;
         background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
         background: transparent;
-        // box-shadow: none;
     }
     60% {
         height: 2px;
@@ -31,7 +30,7 @@
         color: rgba(124, 35, 129, 0.744);
         position: relative;
         background: transparent;
-        font-size: larger;
+        font-size: 2rem;
     }
     80% {
         transform: rotate3d(-1, 1, 100, 3.14rad);
