@@ -3,5 +3,5 @@
 }
 
 @function bgc($bg-name) {
-    @return map-get($bg-colors, $bg-name)
+    @return map-get($bg-colors, $bg-name);
 }

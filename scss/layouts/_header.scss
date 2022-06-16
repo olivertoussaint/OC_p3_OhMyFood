@@ -17,9 +17,6 @@ header {
     }
 
     &.sticky {
-        position: fixed;
-        width: 100%;
-        background-color: #FFF;
-        top: 0;
+        @include sticky;
     } 
 }

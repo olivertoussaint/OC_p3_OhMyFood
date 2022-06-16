@@ -35,11 +35,5 @@
 }
 
 .fas.fa-heart {
-    background: linear-gradient(to top right, #ED74DA, #9356DC);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transition-property: transform;
-    transition-duration: 500ms;
-    transform: scale(0);
+    @include heart;
 }
