@@ -25,9 +25,10 @@
 - Texte: Roboto
 
 *Couleurs*
-- `#9356DC`
-- `#FF79DA`
-- `#99E200`
+<!-- - ![#9356DC](https://via.placeholder.com/15/9356DC/000000?text=+) `#9356DC`
+- ![#FF79DA](https://via.placeholder.com/15/FF79DA/000000?text=+) `#FF79DA`
+- ![#99E200](https://via.placeholder.com/15/99E200/000000?text=+) `#99E200` -->
+<img src="./assets/img/colors.PNG" alt="couleurs prédéfinies">
 
 ### Compatibilité
 La cible étant les personnes connectées et préssées, le site sera développé en utilisant l'approche mobile-first. Pour cette raison, seules des maquettes mobiles seront réalisées.
