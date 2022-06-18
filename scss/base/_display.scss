@@ -1,10 +1,15 @@
 .menusCover {
     @include grid-menu;
     
+    @include laptop {
+        @include grid-menu-2;
+    }
+
     @include tablet {
         @include grid-menu-1;
     }
-    @include laptop {
-        @include grid-menu-2;
+
+    @include mobile-l {
+        bottom: 6rem;
     }
 }

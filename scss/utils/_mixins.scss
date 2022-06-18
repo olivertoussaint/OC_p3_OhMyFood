@@ -96,14 +96,14 @@
     font-weight: weight(bold);
     border-radius: .2rem;
     margin-left: -9rem;
-    margin-top: 28px; 
+    margin-top: 1.75rem; 
 }
 
 @mixin grid-menu {
     display: grid;
     width: 1200px;
     position: relative;
-    bottom: 100px;
+    bottom: 5.25rem;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
     column-gap: 2rem;
@@ -113,7 +113,7 @@
     display: grid;
     width: 95%;
     position: relative;
-    bottom: 80px;
+    bottom: 5rem;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
@@ -122,7 +122,7 @@
     display: grid;
     width: 80%;
     position: relative;
-    bottom: 80px;
+    bottom: 5rem;
     grid-template-columns: 1fr;
 }
 
@@ -165,7 +165,7 @@
     width: 0;
     transition: width 1s;
     border-radius: 0 0.75rem 0.75rem 0;
-    padding: 1.25rem 0px;
+    padding: 1.25rem 0;
 }
 
 @mixin circular-movement {
