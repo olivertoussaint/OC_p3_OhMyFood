@@ -110,13 +110,13 @@
             flex: none;
             width: 80%;
             margin: 0 auto;
-            padding: 18px;
+            padding: 1.125rem;
         }
 
         @include mobile-l {
             width: 90%;
-            padding: 20px 35px;
-            border-radius: 20px;
+            padding: 1.25rem 2.187rem;
+            border-radius: 1.25rem;
             font-weight: weight(bold);
         }
     }
@@ -275,7 +275,7 @@
 
     &__footer {
         position: relative;
-        padding: 7px 10px 10px 15px;
+        padding: 0.437rem 0.625rem 0.625rem 0.937rem;
         @include flex(row,space-between);  
     } 
 }
@@ -296,6 +296,18 @@
     &__picture {
         width: 100%;
         object-fit: cover;
+
+        @include phablet {
+            height: 80vh;
+        }
+        
+        @include laptop-x {
+            height: 84vh;
+        }
+
+        @include mobile-l {
+            height: 250px;
+        }
            
     &--old-dish-1 {
         width: 100%;
@@ -317,11 +329,16 @@
         @include mobile-l {
             font-size: 0.875rem; 
             padding: 1.25rem 1.875rem;
+            bottom: 1rem
         }
     }
 
     &__title--old-dish-3 {
         @include flex-menu-2;
+        @include mobile-l {
+            padding: 1.25rem 1rem 0 1rem;
+            bottom: 2rem;
+        }
     }
 
     &__title--old-dish-4 {
@@ -330,6 +347,22 @@
             padding: 1.25rem 1rem;
             bottom: 1.5rem;
         }
+    }
+}
+
+.menusCover {
+    @include grid-menu;
+    
+    @include laptop {
+        @include grid-menu-2;
+    }
+
+    @include tablet {
+        @include grid-menu-1;
+    }
+
+    @include mobile-l {
+        bottom: 2rem;
     }
 }
 
@@ -410,7 +443,12 @@
         box-shadow: 0 0 0 .3em rgba(#fff,0);
     }
 
-    @media screen and (min-width: 0px) {
+    @include breakpoint-0 {
       margin: -2.8rem auto 0 auto;
     }
+
+    @include mobile-l {
+            margin: 0.5rem auto 0 auto; 
+    }
+
   }
