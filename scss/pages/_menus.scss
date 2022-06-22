@@ -57,7 +57,7 @@
 .working {
     padding: 2rem 0rem;
 
-    @include phablet {
+    @include for-tablet-landscape-up {
         padding: 2rem;
     }
 
@@ -80,7 +80,7 @@
         display: flex;
         gap: 2.5rem;
 
-        @include phablet-max {
+        @include for-tablet-portrait-up {
             flex-wrap: wrap;
             gap: 1rem;
         }
@@ -100,7 +100,7 @@
     &__step {
         @include step;
 
-        @include phablet-max {
+        @include for-tablet-portrait-up {
             flex: none;
             width: 70%;
             margin: 0 auto;
@@ -164,7 +164,7 @@
 .restaurants {
     @include restaurants;
 
-    @include xl-screen {
+    @include for-desktop-up {
         padding: 0 10rem 2rem 10rem;
     }
 
@@ -297,11 +297,11 @@
         width: 100%;
         object-fit: cover;
 
-        @include phablet {
+        @include for-tablet-landscape-up {
             height: 80vh;
         }
         
-        @include laptop-x {
+        @include for-desktop-up {
             height: 84vh;
         }
 

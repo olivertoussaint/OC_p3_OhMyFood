@@ -1,5 +1,6 @@
 header {
     position: relative;
+    
     @include flex(row,center);
     box-shadow: 0 2px 3px 0 rgba(98, 97, 97, 0.476);
     z-index: 1;
